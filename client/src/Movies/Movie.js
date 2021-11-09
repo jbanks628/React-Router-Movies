@@ -6,8 +6,8 @@ export default function Movie(props) {
   const [movie, setMovie] = useState();
  
   const {id} = useParams();
-  console.log(id)
-  const mov = props.movie.find(elem => elem.id === id);
+  
+  const mov = props.movie.find(elem => elem.id === parseInt(id))
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
   useEffect(() => {
